@@ -1,0 +1,21 @@
+#message
+	- flash.each do |type, message|
+		%div{class: "alert #{bootstrap_class_for(type)} fade in"}
+			%button.close{"data-dismiss" => "alert"} ×
+			.text-center
+				= message
+	- if @submission.errors.any?
+		#error_explanation
+			%h2= "#{pluralize(@submission.errors.count, "error")} prohibited this submission from being saved:"
+			%ul
+				- @submission.errors.full_messages.each do |msg|
+					%li= msg
+#form
+	.jumbotron.text-center
+		%h1 Satyaprit Das Memorial Scholarship
+	.container.text-center
+		.row
+			.col-lg-8.col-lg-offset-2
+				%h3 To the Graduating Class of 2014
+
+				= render 'form'
