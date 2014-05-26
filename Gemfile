@@ -14,9 +14,7 @@ gem 'jbuilder', '1.0.2'
 gem 'haml-rails'
 gem 'sprockets', '2.11.0'
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem "paperclip", "~> 4.1"
-gem 'aws-sdk', '~> 1.5.7'
-gem 'active_admin_editor'
+gem 'devise'
 
 gem 'pg'
 
