@@ -1,4 +1,6 @@
 class SubmissionsController < InheritedResources::Base
+	skip_before_action :verify_authenticity_token
+
 	def new
 		@submission = Submission.new
 	end
