@@ -1,6 +1,8 @@
 ActiveAdmin.register AdminUser do
   permit_params :email, :password, :password_confirmation
 
+  menu :if => proc{ current_admin_user.email=='sabyadas@outlook.com' }
+
   index do
     selectable_column
     id_column
