@@ -5,18 +5,39 @@
 			.text-center
 				= message
 	- if @submission.errors.any?
-		#error_explanation
-			%h2= "#{pluralize(@submission.errors.count, "error")} prohibited this submission from being saved:"
-			%ul
-				- @submission.errors.full_messages.each do |msg|
-					%li= msg
+		.container
+			.row
+				.col-xs-12
+					#error_explanation
+						%h2= "#{pluralize(@submission.errors.count, "error")} prohibited this submission from being saved:"
+						%ul
+							- @submission.errors.full_messages.each do |msg|
+								%li= msg
 #form
 	.jumbotron.text-center
 		%h1 Satyaprit Das Memorial Scholarship
+		#portrait= image_tag('portrait.jpg')
 	.container
+		.row#descriptions
+			.col-xs-12.col-md-6
+				.header
+					%h4 Purpose
+					%p This is an annual Essay competition for college scholarship, open to Sacramento area seniors who are headed to college. In 2015, the competition is limited to a 5 schools in the Sacramento region. The competition is held in honor of Satyaprit Das, who was senior at Mira Loma High and died in a tragic car accident on May 1st 2014. It is hosted by the Das Family to commemorate the legacy of Satyaprit, who was a bright student, an avid debater, and always wanted help people in need. Satyaprit valued college education and had decided to go to CMU to pursue pre-law. He started a nonprofit, with the help of several friends in his sophomore year, named Cognitive Exchange (www.cognitivexchange.org), and aimed to help students in emerging democracies to be better speakers and leaders. Cognitive Exchange is now a growing to be a global organization with close to 100 students in India being trained in 2015 on the speech and debate curriculum that Satyaprit and his friends had instituted.
+			.col-xs-12.col-md-6
+				.header
+					%h4 Eligibility
+					%p Seniors bound for college - limited to Sacramento area schools with invitation to participate
+				.header
+					%h4 2015 Topic
+					%p Will be announced ont eh website by 3/25. Responses limited to 750 words. The topics for the essay are chosen from teh ideals and causes Satyaprit was passionate about.
+				.header
+					%h4 Submission Due Date
+					%p Friday, April 17, 2015. Entry for submissions opens on Monday April 13th, with submissions limted to the first 50 entries received.
+				.header
+					%h4 Scholarship Prize
+					%p First place winner will receive a $1,000 scholarship and award certificate, and the second place winner will receive $500 and award certificate.
 		.row
-			.col-xs-12.col-sm-8.col-md-6.col-lg-6
+			.col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-6.col-lg-offset-3.text-center
 				%span.header
-					%h3 To the Graduating Class of 2014
-					%h5 View/download the essay prompt <a href="https://s3-us-west-2.amazonaws.com/satyaprit-assets/Satyaprit+Scholarship+Prompt.docx">by clicking here</a>.
+					%h2 Submission Form
 				= render 'form'

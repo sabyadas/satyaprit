@@ -1,12 +1,19 @@
+#portrait
+	img
+		max-width: 150px
+		border-radius: 50%
+	margin: 25px
 #form
 	background: no-repeat center center
 	background-size: cover
-	background-image: image-url('background.jpg')
-	background-color: #999
+	// background-image: image-url('background.jpg')
 	min-height: 100%
 	.jumbotron
-		color: white
-		background-color: rgba(0,0,0,0.75)
+		padding: 25px
+		color: #666
+		background-color: #f1f1f1
+	#descriptions
+		margin-bottom: 50px
 	input
 		&[type="text"], &[type="string"]
 			min-height: 50px
@@ -18,14 +25,24 @@
 		min-height: 200px
 	input, textarea
 		border: none
+		border-bottom: 4px #666 solid
 		padding-left: 5px
-		background-color: rgba(0,0,0,0.5)
-		color: white
+		//background-color: #f1f1f1
+		color: #666
 		margin-bottom: 4px
-		&[type="text"]:focus
-			border-color: rgba(0,0,0,0.5)
+		&:focus
+			outline: none
 			border-radius: 0px
-			border: none
+			border-bottom: 4px #000 solid
+		&[type="submit"]
+			background-color: #666
+			color: #f1f1f1
+			border-bottom: none
+			padding: 5px 10px 5px 10px
+			border-radius: 0px 10px 0px 10px
+			&:hover
+				background-color: #888
+			margin-bottom: 25px
 	#input-left
 		padding-right: 2px
 	#input-right
@@ -33,10 +50,9 @@
 	.header
 		display: inline-block
 		width: auto
-		background-color: rgba(0,0,0,0.5)
-		color: white
-		padding: 10px
-		margin-bottom: 4px
+		color: #666
+		h4
+			margin-top: 0px
 		h3
 			margin: 0px
 		h5
@@ -44,4 +60,17 @@
 		a
 			color: #999
 			&:hover
-				color: white
+				color: black
+		p
+			text-align: justify
+::-webkit-input-placeholder
+	color: #666
+
+\:-moz-placeholder
+	color: #666
+
+::-moz-placeholder
+	color: #666
+
+\:-ms-input-placeholder
+	color: #666
