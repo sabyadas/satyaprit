@@ -13,7 +13,7 @@
   .row
     .col-xs-12
       Can we showcase your essay on our website if you win?
-      = check_box_tag "Can we showcase your essay on our website if you win?", 'Yes', true
+      %input{:name => "school", :type => "checkbox", :value => true}
   %br
   %br
   = f.submit 'Submit'
