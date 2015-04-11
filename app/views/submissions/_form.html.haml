@@ -10,4 +10,10 @@
   = select(:submission, :school,{ "C. K. McClatchy High School" => "C. K. McClatchy High School", "Folsom High School" => "Folsom High School", "Granite Bay High School"=>"Granite Bay High School", "Mira Loma High School"=>"Mira Loma High School", "Ponderosa High School"=>"Ponderosa High School", "Sacramento Country Day School" => "Sacramento Country Day School", "Vista del Lago High School"=>"Vista del Lago High School"})
   %br
   %br
+  .row
+    .col-xs-12
+      Can we showcase your essay on our website if you win?
+      = check_box_tag "Can we showcase your essay on our website if you win?", 'Yes', true
+  %br
+  %br
   = f.submit 'Submit'
