@@ -6,5 +6,8 @@
       = f.text_field :last_name, placeholder: 'Last Name'
   = f.text_field :email, placeholder: 'Email'
   = f.text_area :essay, placeholder: 'Please copy and paste the text of your essay here'
-  = f.text_field :school, placeholder: 'Enter your school name here'
+  / = f.select :school, placeholder: 'Enter your school name here'
+  = select(:submission, :school,{ "C. K. McClatchy High School" => "C. K. McClatchy High School", "Folsom High School" => "Folsom High School", "Granite Bay High School"=>"Granite Bay High School", "Mira Loma High School"=>"Mira Loma High School", "Ponderosa High School"=>"Ponderosa High School", "Sacramento Country Day School" => "Sacramento Country Day School", "Vista del Lago High School"=>"Vista del Lago High School"})
+  %br
+  %br
   = f.submit 'Submit'
