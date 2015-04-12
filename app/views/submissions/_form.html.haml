@@ -12,8 +12,9 @@
   %br
   .row
     .col-xs-12
-      Can we showcase your essay on our website if you win?
-      %input{:name => "school", :type => "checkbox", :value => true}
-  %br
+      By checking this, you agree to publication of your essay on our website if yours is one of the winning entries
+      = f.check_box :postconfirm
   %br
   = f.submit 'Submit'
+  %br
+  %p If you have any questions regarding the scholarship or this website, <a href="mailto:sabyadas@outlook.com?subject=Satyaprit.com Inquiry">email us</a>!
