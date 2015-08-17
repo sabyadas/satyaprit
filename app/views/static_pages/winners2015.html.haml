@@ -1,0 +1,19 @@
+#form
+	.jumbotron.text-center
+		%h1.red-color Satyaprit Das Memorial Scholarship
+		#portrait= image_tag('portrait.jpg')
+	.container.text-center
+		.row#descriptions
+			.col-xs-12.col-md-8.col-md-offset-2
+				%h1 A letter from the Das Family
+				%p <b>Thanks to everyone who applied for the Satyaprit Das Memorial Scholarship. We enjoyed reading each and every one of the submissions and know Satyaprit would have loved them as well. We wish you all the very best in your journey through college and life.</b>
+				%p - <i>The Das Family</i>
+			.col-xs-12.col-md-8.col-md-offset-2
+				%h1 2015 Scholarship Recepients
+				%h4 First Place: <b>Sonali Gupta</b>
+				%h4 Second Place: <b>Sumana Sai Kaluvai</b>
+				.header
+					%h4 Congratulations to you both!
+				.col-xs-12.col-md-8.col-md-offset-2
+					%h4 Read the winning entries below:
+					.btn.btn-default=link_to 'Winning entries', 'https://s3-us-west-2.amazonaws.com/satyaprit/winners2015.pdf', target: '_blank'
